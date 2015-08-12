@@ -14,12 +14,16 @@ namespace dashing.net
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Default",
-                url: "{action}/{id}",
-                defaults: new { controller = "Dashboard", action = "Sampletv", id = UrlParameter.Optional }
+                name: "Dashboards",
+                url: "dashboard/{dashboardName}",
+                defaults: new {controller = "Dashboard", action = "Index"}
             );
 
-
+            routes.MapRoute(
+                name: "Default",
+                url: "{action}/{id}",
+                defaults: new { controller = "Dashboard", action = "Index", id = UrlParameter.Optional }
+            );
         }
     }
 }

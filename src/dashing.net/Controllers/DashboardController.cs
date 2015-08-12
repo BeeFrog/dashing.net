@@ -9,14 +9,9 @@ namespace dashing.net.Controllers
 {
     public class DashboardController : Controller
     {
-        public ActionResult Sampletv()
+        public ActionResult Index(string dashboardName)
         {
-            return View();
-        }
-
-        public ActionResult Sample()
-        {
-            return View();
+            return View(dashboardName);
         }
     }
 }
