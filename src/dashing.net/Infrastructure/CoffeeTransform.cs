@@ -1,6 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Web.Optimization;
+using SassAndCoffee.Core;
+using SassAndCoffee.JavaScript;
+using SassAndCoffee.JavaScript.CoffeeScript;
 
 namespace dashing.net.Infrastructure
 {
@@ -8,7 +11,7 @@ namespace dashing.net.Infrastructure
     {
         public void Process(BundleContext context, BundleResponse response)
         {
-            var coffee = new CoffeeSharp.CoffeeScriptEngine();
+            var coffee = new CoffeeScriptCompiler(new InstanceProvider<IJavaScriptRuntime>(() => new IEJavaScriptRuntime()));
 
             response.ContentType = "text/javascript";
             response.Content = string.Empty;
