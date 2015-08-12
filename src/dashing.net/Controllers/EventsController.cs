@@ -13,26 +13,13 @@
     {
         private static readonly BlockingCollection<string> MessageQueue = new BlockingCollection<string>();
 
-        private static bool hasInstantiated;
-
-        public void Send()
+        public EventsController()
         {
-            if (hasInstantiated == false)
-            {
-                LoadJobs();
-            }
-        }
+            Dashing.SendMessage = SendMessage;
 
-        public override Task OnConnected()
-        {
-            if (hasInstantiated == false)
-            {
-                LoadJobs();
+            Task.Factory.StartNew(ProcessQueue);
 
-                hasInstantiated = true;
-            }
-
-            return base.OnConnected();
+            Jobs.Start();
         }
 
         private void SendMessage(dynamic message)
@@ -59,15 +46,6 @@
             {
                 Clients.All.sendMessage(message);
             }
-        }
-
-        private void LoadJobs()
-        {
-            Dashing.SendMessage = SendMessage;
-
-            Task.Factory.StartNew(ProcessQueue);
-
-            Jobs.Start();
         }
     }
 }
