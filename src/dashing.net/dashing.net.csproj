@@ -326,6 +326,8 @@
     <Content Include="Widgets\highchart\highchart.coffee" />
     <Content Include="Widgets\highchart\highchart.scss" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="Views\Dashboard\Sample.cshtml" />
+    <Content Include="Views\Dashboard\Sampletv.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -341,9 +343,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\application.coffee" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Dashboard\Prompts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\_ViewStart.cshtml" />

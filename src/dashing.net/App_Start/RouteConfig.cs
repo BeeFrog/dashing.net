@@ -15,7 +15,7 @@ namespace dashing.net
 
             routes.MapRoute(
                 name: "Dashboards",
-                url: "dashboard/{dashboardName}",
+                url: "{dashboardName}",
                 defaults: new {controller = "Dashboard", action = "Index"}
             );
 
