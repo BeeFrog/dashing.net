@@ -36,6 +36,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
@@ -45,14 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Buzzwords.cs" />
-    <Compile Include="Convergence.cs" />
+    <Compile Include="Examples\Buzzwords.cs" />
+    <Compile Include="Examples\Convergence.cs" />
     <Compile Include="Job.cs" />
-    <Compile Include="Karma.cs" />
+    <Compile Include="Examples\Karma.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sample.cs" />
-    <Compile Include="Synergy.cs" />
-    <Compile Include="Twitter.cs" />
+    <Compile Include="Examples\Sample.cs" />
+    <Compile Include="Examples\Synergy.cs" />
+    <Compile Include="Examples\Twitter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\dashing.net.common\dashing.net.common.csproj">
