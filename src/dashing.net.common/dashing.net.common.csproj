@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IDataProcessor.cs" />
+    <Compile Include="IDataRetriever.cs" />
     <Compile Include="IJob.cs" />
     <Compile Include="Jobs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
