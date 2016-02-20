@@ -9,6 +9,8 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using dashing.net.App_Start;
 using dashing.net.Controllers;
+using System.Text.RegularExpressions;
+using dashing.net.Authentication;
 
 namespace dashing.net
 {
@@ -16,6 +18,8 @@ namespace dashing.net
     // visit http://go.microsoft.com/?LinkId=9394801
     public class MvcApplication : System.Web.HttpApplication
     {
+        private static IAuthenticater authenticator;
+
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
@@ -25,6 +29,7 @@ namespace dashing.net
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             JobConfig.RegisterJobs();
+            authenticator = new SimpleAuthentication();
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
@@ -73,6 +78,20 @@ namespace dashing.net
 
             IController controller = new ErrorController();
             controller.Execute(new RequestContext(new HttpContextWrapper(Context), routeData));
+        }
+
+        /// <summary>
+        /// Fires when a request needs authenticating.
+        /// </summary>
+        protected void Application_AuthenticateRequest()
+        {
+            this.Context.User = null;
+
+            var cookie = this.Request.Cookies["authToken"];
+            if (!Regex.IsMatch(this.Request.Url.GetLeftPart(UriPartial.Path), @"map/\d+/\d+/\d+.png$") && cookie != null)
+            {
+                this.Context.User = authenticator.GetAuthenticatedUser(Request);
+            }
         }
     }
 }

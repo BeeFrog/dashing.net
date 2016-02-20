@@ -190,6 +190,11 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\JobConfig.cs" />
+    <Compile Include="Authentication\BasicIdentity.cs" />
+    <Compile Include="Authentication\IAuthenticater.cs" />
+    <Compile Include="Authentication\SimpleAuthentication.cs" />
+    <Compile Include="Authentication\StringProtector.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
@@ -224,9 +229,6 @@
     <Content Include="Content\vumeter-background.png" />
     <Content Include="Content\css\font-awesome.css" />
     <Content Include="Content\css\font-awesome.min.css" />
-    <Content Include="Jobs\dashing.net.jobs.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Scripts\batman.jquery.js" />
     <Content Include="Scripts\batman.js" />
     <Content Include="Scripts\d3.v3.js" />
@@ -252,6 +254,100 @@
     <Content Include="Content\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\fonts\fontawesome-webfont.eot" />
     <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Widgets\clock\clock.css">
+      <DependentUpon>clock.scss</DependentUpon>
+    </Content>
+    <Content Include="Widgets\clock\clock.min.css">
+      <DependentUpon>clock.css</DependentUpon>
+    </Content>
+    <Content Include="Widgets\comments\comments.css">
+      <DependentUpon>comments.scss</DependentUpon>
+    </Content>
+    <Content Include="Widgets\comments\comments.min.css">
+      <DependentUpon>comments.css</DependentUpon>
+    </Content>
+    <Content Include="Widgets\graph\graph.css">
+      <DependentUpon>graph.scss</DependentUpon>
+    </Content>
+    <Content Include="Widgets\graph\graph.min.css">
+      <DependentUpon>graph.css</DependentUpon>
+    </Content>
+    <Content Include="Widgets\highchart\highchart.css">
+      <DependentUpon>highchart.scss</DependentUpon>
+    </Content>
+    <Content Include="Widgets\highchart\highchart.min.css">
+      <DependentUpon>highchart.css</DependentUpon>
+    </Content>
+    <Content Include="Widgets\iframe\iframe.css">
+      <DependentUpon>iframe.scss</DependentUpon>
+    </Content>
+    <Content Include="Widgets\iframe\iframe.min.css">
+      <DependentUpon>iframe.css</DependentUpon>
+    </Content>
+    <Content Include="Widgets\image\image.css">
+      <DependentUpon>image.scss</DependentUpon>
+    </Content>
+    <Content Include="Widgets\image\image.min.css">
+      <DependentUpon>image.css</DependentUpon>
+    </Content>
+    <Content Include="Widgets\list\list.css">
+      <DependentUpon>list.scss</DependentUpon>
+    </Content>
+    <Content Include="Widgets\list\list.min.css">
+      <DependentUpon>list.css</DependentUpon>
+    </Content>
+    <Content Include="Widgets\meter\meter.css">
+      <DependentUpon>meter.scss</DependentUpon>
+    </Content>
+    <Content Include="Widgets\meter\meter.min.css">
+      <DependentUpon>meter.css</DependentUpon>
+    </Content>
+    <Content Include="Widgets\number\number.css">
+      <DependentUpon>number.scss</DependentUpon>
+    </Content>
+    <Content Include="Widgets\number\number.min.css">
+      <DependentUpon>number.css</DependentUpon>
+    </Content>
+    <Content Include="Widgets\rickshawgraph\rickshawgraph.css">
+      <DependentUpon>rickshawgraph.scss</DependentUpon>
+    </Content>
+    <Content Include="Widgets\rickshawgraph\rickshawgraph.min.css">
+      <DependentUpon>rickshawgraph.css</DependentUpon>
+    </Content>
+    <Content Include="Widgets\rss\rss.css">
+      <DependentUpon>rss.scss</DependentUpon>
+    </Content>
+    <Content Include="Widgets\rss\rss.html" />
+    <Content Include="Widgets\rss\rss.min.css">
+      <DependentUpon>rss.css</DependentUpon>
+    </Content>
+    <Content Include="Widgets\team_city\team_city.css">
+      <DependentUpon>team_city.scss</DependentUpon>
+    </Content>
+    <Content Include="Widgets\team_city\team_city.html" />
+    <Content Include="Widgets\team_city\team_city.min.css">
+      <DependentUpon>team_city.css</DependentUpon>
+    </Content>
+    <Content Include="Widgets\text\text.css">
+      <DependentUpon>text.scss</DependentUpon>
+    </Content>
+    <Content Include="Widgets\text\text.min.css">
+      <DependentUpon>text.css</DependentUpon>
+    </Content>
+    <Content Include="Widgets\vumeter\vumeter.css">
+      <DependentUpon>vumeter.scss</DependentUpon>
+    </Content>
+    <Content Include="Widgets\vumeter\vumeter.min.css">
+      <DependentUpon>vumeter.css</DependentUpon>
+    </Content>
+    <Content Include="Widgets\whosoff\whosoff.css">
+      <DependentUpon>whosoff.scss</DependentUpon>
+    </Content>
+    <Content Include="Widgets\whosoff\whosoff.html" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
@@ -326,9 +422,23 @@
     <Content Include="Widgets\highchart\highchart.coffee" />
     <Content Include="Widgets\highchart\highchart.scss" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="Widgets\whosoff\whosoff.coffee" />
+    <Content Include="Widgets\whosoff\whosoff.min.css">
+      <DependentUpon>whosoff.css</DependentUpon>
+    </Content>
+    <Content Include="Widgets\whosoff\whosoff.scss" />
+    <Content Include="Widgets\team_city\team_city.coffee" />
+    <Content Include="Widgets\team_city\team_city.scss" />
+    <Content Include="Views\Admin\burndown.cshtml" />
+    <Content Include="Views\Admin\sprintgoal.cshtml" />
+    <Content Include="Views\Admin\index.cshtml" />
+    <Content Include="Widgets\rss\rss.coffee" />
+    <Content Include="Widgets\rss\rss.scss" />
+    <Content Include="Views\Admin\login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Jobs\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -355,10 +465,6 @@
     <ProjectReference Include="..\dashing.net.common\dashing.net.common.csproj">
       <Project>{1312F418-39DA-4AC4-BBF6-1D9CA56B9DFF}</Project>
       <Name>dashing.net.common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\dashing.net.jobs\dashing.net.jobs.csproj">
-      <Project>{EFF2BAF0-C702-4355-83B0-C433F787DB68}</Project>
-      <Name>dashing.net.jobs</Name>
     </ProjectReference>
     <ProjectReference Include="..\dashing.net.streaming\dashing.net.streaming.csproj">
       <Project>{e8e6f9c1-b3da-423f-bc5e-a00d97ee2589}</Project>
