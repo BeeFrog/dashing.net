@@ -1,0 +1,37 @@
+﻿<div class="gridster">
+    <ul>
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="3">
+            <div data-id="teamcity" data-view="TeamCity" data-unordered="true" data-title="TeamCity" data-moreinfo="Build status"></div>
+        </li>
+
+        <li data-row="1" data-col="4" data-sizex="1" data-sizey="1">
+            <div data-id="rss" data-view="Rss" style="background-color:#ce44ef;" data-title="BBC Tech News"></div>
+        </li>
+
+        <li data-row="1" data-col="5" data-sizex="1" data-sizey="1">
+            <div data-view="Clock"></div>
+            <i class="fa fa-clock-o icon-background"></i>
+        </li>
+
+        <li data-row="1" data-col="2" data-sizex="2" data-sizey="1">
+            <div data-id="sprintgoal" data-view="Text" data-title="Sprint Goal" data-text="Primary: Get shit done<br>Secondary: Get more shit done" data-moreinfo=""></div>
+        </li>
+
+        <li data-row="2" data-col="2" data-sizex="2" data-sizey="2">
+            <div data-id="burndown" data-view="Graph" data-title="Burn Down" style="background-color:#47bbb3;" data-moreinfo=""></div>
+        </li>
+
+        <li data-row="2" data-col="4" data-sizex="2" data-sizey="2">
+            <div data-id="whosoff" data-view="Whosoff" data-unordered="true" data-title="Whos Off?" data-moreinfo="Whos off soon."></div>
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+            // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+        // Dashing.gridsterLayout('[{"col":2,"row":1},{"col":1,"row":1},{"col":3,"row":1},{"col":2,"row":2},{"col":3,"row":2},{"col":1,"row":2},{"col":5,"row":1},{"col":4,"row":2},{"col":2,"row":3}]');
+        Dashing.widget_base_dimensions = [370, 340];
+        Dashing.numColumns = 5;
+    });
+</script>
