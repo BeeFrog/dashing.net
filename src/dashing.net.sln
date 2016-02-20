@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.22823.1
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dashing.net", "dashing.net\dashing.net.csproj", "{A65082A3-B58D-4322-9628-3F52A34E5614}"
 EndProject
@@ -10,6 +10,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dashing.net.streaming", "dashing.net.streaming\dashing.net.streaming.csproj", "{E8E6F9C1-B3DA-423F-BC5E-A00D97EE2589}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dashing.net.common", "dashing.net.common\dashing.net.common.csproj", "{1312F418-39DA-4AC4-BBF6-1D9CA56B9DFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dashing.net.jobs.TeamCity", "dashing.net.jobs.TeamCity\dashing.net.jobs.TeamCity.csproj", "{9BDDAFA3-06D9-4971-9196-16CF4B7E7291}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dashing.net.jobs.WhosOff", "dashing.net.jobs.WhosOff\dashing.net.jobs.WhosOff.csproj", "{5E3B1C08-B214-4A7A-B60D-E016A393625D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Jobs", "Jobs", "{579592EA-5F9D-4338-8C75-F5A04ECFC2A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dashing.net.jobs.Scrum", "dashing.net.jobs.Scrum\dashing.net.jobs.Scrum.csproj", "{D3719962-E779-44DF-AA2C-92FDCE129822}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dashing.net.jobs.Rss", "dashing.net.jobs.Rss\dashing.net.jobs.Rss.csproj", "{CA84F76A-1AF2-4D12-AF0B-94C114C2D9EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +43,31 @@ Global
 		{1312F418-39DA-4AC4-BBF6-1D9CA56B9DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1312F418-39DA-4AC4-BBF6-1D9CA56B9DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1312F418-39DA-4AC4-BBF6-1D9CA56B9DFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BDDAFA3-06D9-4971-9196-16CF4B7E7291}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BDDAFA3-06D9-4971-9196-16CF4B7E7291}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BDDAFA3-06D9-4971-9196-16CF4B7E7291}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BDDAFA3-06D9-4971-9196-16CF4B7E7291}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E3B1C08-B214-4A7A-B60D-E016A393625D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E3B1C08-B214-4A7A-B60D-E016A393625D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E3B1C08-B214-4A7A-B60D-E016A393625D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E3B1C08-B214-4A7A-B60D-E016A393625D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3719962-E779-44DF-AA2C-92FDCE129822}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3719962-E779-44DF-AA2C-92FDCE129822}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3719962-E779-44DF-AA2C-92FDCE129822}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3719962-E779-44DF-AA2C-92FDCE129822}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA84F76A-1AF2-4D12-AF0B-94C114C2D9EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA84F76A-1AF2-4D12-AF0B-94C114C2D9EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA84F76A-1AF2-4D12-AF0B-94C114C2D9EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA84F76A-1AF2-4D12-AF0B-94C114C2D9EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EFF2BAF0-C702-4355-83B0-C433F787DB68} = {579592EA-5F9D-4338-8C75-F5A04ECFC2A6}
+		{9BDDAFA3-06D9-4971-9196-16CF4B7E7291} = {579592EA-5F9D-4338-8C75-F5A04ECFC2A6}
+		{5E3B1C08-B214-4A7A-B60D-E016A393625D} = {579592EA-5F9D-4338-8C75-F5A04ECFC2A6}
+		{D3719962-E779-44DF-AA2C-92FDCE129822} = {579592EA-5F9D-4338-8C75-F5A04ECFC2A6}
+		{CA84F76A-1AF2-4D12-AF0B-94C114C2D9EF} = {579592EA-5F9D-4338-8C75-F5A04ECFC2A6}
 	EndGlobalSection
 EndGlobal

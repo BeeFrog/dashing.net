@@ -1,0 +1,18 @@
+﻿<div class="gridster">
+    <h1>Sprint Goal</h1>
+    <ul>
+        <li data-row="2" data-col="1" data-sizex="3" data-sizey="3">
+            <div>
+                <form action="/Admin/SendMessage" method="post">
+                    <p>
+                        @Html.Hidden("id","sprintgoal")
+                        Sprint Goal <br>
+                        <textarea id="text" name="text" type="text">@Model</textarea><br>
+                        <input type="submit" value="Submit"><br><br>
+                        @Html.ActionLink("Back to List", "Index")
+                    </p>
+                </form>
+            </div>
+        </li>
+    </ul>
+</div>

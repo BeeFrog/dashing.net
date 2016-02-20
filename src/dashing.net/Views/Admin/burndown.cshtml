@@ -1,0 +1,41 @@
+﻿@{
+    var dataModel = Model;    
+
+    if(dataModel ==null)
+    {
+        var d = new { y = 0 };
+        dataModel = new []{ d,d,d,d,d,d,d,d,d,d };
+    }
+}
+<div class="gridster">
+    <h1>Burn Down</h1>
+    <ul>
+        <li data-row="2" data-col="1" data-sizex="3" data-sizey="3">
+            <div>
+                <form action="/Admin/SendMessage" method="post">
+                    <p>
+                        @Html.Hidden("id","burndown")
+                        AuthKey <input type="text" value="AuthToken" /><br />
+                        <br />
+                        <h3>Week 1</h3>
+                        Monday  <input type="number" name="d1" value="@dataModel[0].y" /><br />
+                        Tuesday  <input type="number" name="d2" value="@dataModel[1].y" /><br />
+                        Wednesday <input type="number" name="d3" value="@dataModel[2].y" /><br />
+                        Thursday  <input type="number" name="d4" value="@dataModel[3].y" /><br />
+                        Friday    <input type="number" name="d5" value="@dataModel[4].y" /><br />
+                        <br />
+                        <h3>Week 2</h3>
+                        Monday <input type="number" name="d6" value="@dataModel[5].y" /><br />
+                        Tuesday <input type="number" name="d7" value="@dataModel[6].y" /><br />
+                        Wednesday <input type="number" name="d8" value="@dataModel[7].y" /><br />
+                        Thursday <input type="number" name="d9" value="@dataModel[8].y" /><br />
+                        Friday <input type="number" name="d10" value="@dataModel[9].y" /><br />
+                        <br /><br />
+                        <input type="submit" value="Submit" /><br />
+                        @Html.ActionLink("Back to List", "Index")
+                    </p>
+                </form>
+            </div>
+        </li>
+    </ul>
+</div>
