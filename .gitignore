@@ -109,3 +109,5 @@ UpgradeLog*.XML
 
 src/packages
 src/.vs
+src/dashing.net/Jobs/
+src/dashing.net/App_Data/

@@ -1,0 +1,66 @@
+﻿[
+  {
+    "outputFile": "Widgets/whosoff/whosoff.css",
+    "inputFile": "Widgets/whosoff/whosoff.scss"
+  },
+  {
+    "outputFile": "Widgets/teamcity/team_city.css",
+    "inputFile": "Widgets/teamcity/team_city.scss"
+  },
+  {
+    "outputFile": "Widgets/team_city/team_city.css",
+    "inputFile": "Widgets/team_city/team_city.scss"
+  },
+  {
+    "outputFile": "Widgets/rss/rss.css",
+    "inputFile": "Widgets/rss/rss.scss"
+  },
+  {
+    "outputFile": "Widgets/text/text.css",
+    "inputFile": "Widgets/text/text.scss"
+  },
+  {
+    "outputFile": "Widgets/vumeter/vumeter.css",
+    "inputFile": "Widgets/vumeter/vumeter.scss"
+  },
+  {
+    "outputFile": "Widgets/clock/clock.css",
+    "inputFile": "Widgets/clock/clock.scss"
+  },
+  {
+    "outputFile": "Widgets/comments/comments.css",
+    "inputFile": "Widgets/comments/comments.scss"
+  },
+  {
+    "outputFile": "Widgets/graph/graph.css",
+    "inputFile": "Widgets/graph/graph.scss"
+  },
+  {
+    "outputFile": "Widgets/highchart/highchart.css",
+    "inputFile": "Widgets/highchart/highchart.scss"
+  },
+  {
+    "outputFile": "Widgets/iframe/iframe.css",
+    "inputFile": "Widgets/iframe/iframe.scss"
+  },
+  {
+    "outputFile": "Widgets/image/image.css",
+    "inputFile": "Widgets/image/image.scss"
+  },
+  {
+    "outputFile": "Widgets/list/list.css",
+    "inputFile": "Widgets/list/list.scss"
+  },
+  {
+    "outputFile": "Widgets/meter/meter.css",
+    "inputFile": "Widgets/meter/meter.scss"
+  },
+  {
+    "outputFile": "Widgets/number/number.css",
+    "inputFile": "Widgets/number/number.scss"
+  },
+  {
+    "outputFile": "Widgets/rickshawgraph/rickshawgraph.css",
+    "inputFile": "Widgets/rickshawgraph/rickshawgraph.scss"
+  }
+]

@@ -1,0 +1,60 @@
+﻿.widget-rickshawgraph {
+  background-color: #dc5945;
+  position: relative; }
+  .widget-rickshawgraph .rickshaw_graph {
+    position: absolute;
+    left: 0px;
+    top: 0px; }
+  .widget-rickshawgraph svg {
+    position: absolute;
+    left: 0px;
+    top: 0px; }
+  .widget-rickshawgraph .title, .widget-rickshawgraph .value {
+    position: relative;
+    z-index: 99; }
+  .widget-rickshawgraph .title {
+    color: rgba(255, 255, 255, 0.7); }
+  .widget-rickshawgraph .more-info {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 0; }
+  .widget-rickshawgraph .x_tick {
+    position: absolute;
+    bottom: 0; }
+    .widget-rickshawgraph .x_tick .title {
+      font-size: 20px;
+      color: rgba(0, 0, 0, 0.4);
+      opacity: 0.5;
+      padding-bottom: 3px; }
+  .widget-rickshawgraph .y_ticks {
+    font-size: 20px;
+    fill: rgba(0, 0, 0, 0.4); }
+    .widget-rickshawgraph .y_ticks text {
+      opacity: 0.5; }
+  .widget-rickshawgraph .domain {
+    display: none; }
+  .widget-rickshawgraph .rickshaw_legend {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    font-size: 15px;
+    height: 20px; }
+    .widget-rickshawgraph .rickshaw_legend ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      text-align: center; }
+    .widget-rickshawgraph .rickshaw_legend ul li {
+      display: inline; }
+    .widget-rickshawgraph .rickshaw_legend .swatch {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-left: 5px; }
+    .widget-rickshawgraph .rickshaw_legend .label {
+      display: inline-block;
+      margin-left: 5px; }
+

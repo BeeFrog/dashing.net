@@ -33,11 +33,13 @@
 			var styles = new Bundle("~/bundles/application-css")
 				.Include("~/Content/css/font-awesome.css")
 				.Include("~/Content/jquery.gridster.css")
-				.IncludeDirectory("~/Widgets", "*.scss", true)
-				.Include("~/Content/application.scss");
+                //.IncludeDirectory("~/Widgets", "*.scss", true)
+                .IncludeDirectory("~/Widgets", "*.css", true)
+                //.Include("~/Content/application.scss");
+                .Include("~/Content/application.css");
 
-			styles.Transforms.Add(new ScssTransform());
-			bundles.Add(styles);
+            //styles.Transforms.Add(new ScssTransform());
+            bundles.Add(styles);
 
 			BundleTable.EnableOptimizations = true;
 		}
