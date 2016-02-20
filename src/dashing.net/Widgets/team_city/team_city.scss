@@ -1,0 +1,119 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$value-color:              #FFF;
+$background-error-color: #E64040;
+$background-passed-color: rgba(111, 214, 85, 0.66);
+$background-investigation-color: #E64040;
+$background-started-color: #E7D100;
+$background-no-status-color: rgba(115, 115, 115, 0.73);
+ 
+$title-color:       rgba(255, 255, 255, 1);
+$label-color:       rgba(255, 255, 255, 0.7);
+$moreinfo-color:    rgba(255, 255, 255, 0.7);
+$background: #444;
+
+
+@-webkit-keyframes tcstatus-warning-background {
+  0%   { background-color: $background-error-color; }
+  50%  { background-color: $background-error-color; }
+  100% { background-color: $background-error-color; }
+}
+
+@mixin animation($animation-name, $duration, $function, $animation-iteration-count:""){
+  -webkit-animation:  $animation-name $duration $function #{$animation-iteration-count};
+  -moz-animation:     $animation-name $duration $function #{$animation-iteration-count};
+  -ms-animation:      $animation-name $duration $function #{$animation-iteration-count};
+}
+
+/*
+@include keyframes(blink) {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+    */
+// ----------------------------------------------------------------------------
+// Widget-list styles
+// ----------------------------------------------------------------------------
+.widget-team-city{
+  background-color: $background;
+  vertical-align: top !important;
+ 
+  h1{
+    text-transform: none;
+  }
+  h3{
+    font-size: 15px;
+    margin: 5px 0;
+    font-weight: lighter;
+  }
+ 
+  img {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    margin: 0 auto;
+    opacity: 0.05;
+    max-width: 80%;
+    max-height: 80%;
+  }
+ 
+  .title, strong{
+    color: $title-color;
+  }
+ 
+  ul {
+    margin: 0;
+    text-align: left;
+    list-style: none;
+    color: $label-color;
+  }
+ 
+  li {
+    margin-bottom: 3px;
+    width:100%;
+  }
+ 
+  .project{
+    .project-name{
+      padding-top: 5px;
+    }
+  }
+  .builds{
+    p{
+      padding: 8px;
+    }
+    li{
+      background-color: $background-no-status-color;
+      width: 100%;
+    }
+    margin-bottom: 5px;
+    .SUCCESS{
+      background-color: $background-passed-color;
+    }
+    .FAILURE{
+      background-color: $background-error-color;
+      @include animation(tcstatus-warning-background, 2s, step-start, infinite);      
+    }
+    .INVESTIGATION{
+      span:before{
+        content: "\f06e";
+        font-family: FontAwesome;
+        padding-right: 3px;
+      }
+      background-color: $background-investigation-color;
+    }
+    .build-type-name{
+      font-size: 17px;
+    }
+  }
+ 
+  .updated-at {
+    color: rgba(0, 0, 0, 0.3);
+  }
+ 
+  .more-info {
+    color: $moreinfo-color;
+  }
+}

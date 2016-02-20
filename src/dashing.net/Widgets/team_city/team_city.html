@@ -1,0 +1,21 @@
+<h1 class="title" data-bind="title"></h1>
+
+<ul class="list-nostyle">
+    <li data-foreach-item="items">
+        <h3 class="project-name" data-bind="item.Name"></h3>
+        <ul>
+            <li class="" data-foreach-item="item.BuildTypes" data-bind-class="item.Status | append ' project builds'">
+                <div >
+                    <p class="" data-bind-class="item.Status">
+                        <strong class="build-type-name" data-bind="item.Name"></strong>                        
+                        #<span class="build-type-name" data-bind="item.LastBuildNumber"></span>
+                        - <span class="build-type-name" data-bind="item.LastChangedBy"></span>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<p class="more-info" data-bind="moreinfo"></p>
+<p class="updated-at" data-bind="updatedAtMessage"></p>
