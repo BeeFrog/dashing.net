@@ -1,0 +1,1 @@
+class Dashing.Rss extends Dashing.Widget

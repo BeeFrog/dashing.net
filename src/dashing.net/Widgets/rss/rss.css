@@ -1,0 +1,13 @@
+﻿.widget-news {
+  background-color: #FF9500;
+  vertical-align: baseline !important; }
+  .widget-news .headline-container {
+    display: none; }
+  .widget-news .title {
+    font-size: 1.2em; }
+  .widget-news .description {
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.8); }
+  .widget-news .heading {
+    color: black; }
+
