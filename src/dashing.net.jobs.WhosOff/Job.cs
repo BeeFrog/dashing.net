@@ -30,7 +30,7 @@ namespace dashing.net.jobs.WhosOff
             }
 
             var data = new WhosOffDataModel();
-            data.items.Add(new WhosOffDataModel.Item { DaysOff = 0, StartDate = "", Name = "Feed URL:" + this.feelUrl });
+            data.items.Add(new WhosOffDataModel.Item { DaysOff = 0, Name = "Feed URL:" + this.feelUrl });
             Dashing.SendMessage(new { id = "whosoff", items = data.items });
 
             Timer = new Lazy<Timer>(() => new Timer(SendMessage, null, TimeSpan.Zero, TimeSpan.FromMinutes(this.refreshInterval)));            
@@ -74,11 +74,11 @@ namespace dashing.net.jobs.WhosOff
                 {
                     var item = new WhosOffDataModel.Item()
                     {
-                        StartDate = subItem.Start.ToString("dd/MM/yyyy"),
-                        EndDate = subItem.End.ToString("dd/MM/yyyy"),
+                        StartDate = subItem.Start.Value,
+                        EndDate = subItem.End.Value,
                         DaysOff = Math.Round((subItem.End.Value - subItem.Start.Value).TotalDays, 2),
                         Name = subItem.Summary,
-                    };                                       
+                    };
 
                     model.items.Add(item);
                 }

@@ -26,12 +26,14 @@
         public class Item
         {
             public string Name { get; set; }
-            public string StartDate { get; set; }
-            public string EndDate { get; set; }
+            public DateTime StartDate { get; set; }
+            public DateTime EndDate { get; set; }
 
             public double DaysOff { get; set; }
 
-            public string DisplayText { get; set; }
+            public string DisplayText { get { return string.Format("{0:dd/MM/yyyy} ({1} days)", StartDate, DaysOff); } }
+
+            public bool OffToday { get { return DateTime.Now >= this.StartDate; } }
         }
     }
 }

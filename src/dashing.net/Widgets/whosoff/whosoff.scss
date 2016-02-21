@@ -3,6 +3,7 @@
 // ----------------------------------------------------------------------------
 $background-color:  #12b0c5;
 $value-color:       #fff;
+$off-color:     turquoise; //  #f00;
 
 $title-color:       rgba(255, 255, 255, 0.7);
 $label-color:       rgba(255, 255, 255, 0.7);
@@ -36,6 +37,10 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
 
   .list-nostyle {
     list-style: none;
+  }
+
+  .off {
+    background-color: $off-color;
   }
 
   .label {

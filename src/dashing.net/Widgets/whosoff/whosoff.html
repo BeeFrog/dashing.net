@@ -8,9 +8,12 @@
 </ol>
 
 <ul class="list-nostyle">
-  <li data-foreach-item="items">
-    <span class="label" data-bind="item.Name"></span>      
+  <li data-foreach-item="items" data-addclass-off='item.OffToday'>
+    <span class="label" data-bind="item.Name" data-addclass-off='item.OffToday'></span>      
+    <span class="value" data-bind="item.DisplayText"></span>
+<!--
     <span class="value" data-bind="item.StartDate | append ' (' | append item.DaysOff | append ' days)'"></span>
+-->
   </li>
 </ul>
 

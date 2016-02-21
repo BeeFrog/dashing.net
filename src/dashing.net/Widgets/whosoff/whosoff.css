@@ -13,6 +13,8 @@
     margin-bottom: 5px; }
   .widget-whosoff .list-nostyle {
     list-style: none; }
+  .widget-whosoff .off {
+    background-color: turquoise; }
   .widget-whosoff .label {
     color: rgba(255, 255, 255, 0.7); }
   .widget-whosoff .value {
